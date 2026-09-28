@@ -2,7 +2,7 @@
 
 namespace homework {
 
-void printHello() { std::cout << "Hello, World!" << std::endl; }
+void printHello() { std::cout << "Hello, World!" << std::endl; std::cout << "Hello, PR" << std::endl; }
 
 void AddOneRef(int &x) { return; }
 
