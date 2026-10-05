@@ -4,12 +4,20 @@ namespace homework {
 
 void printHello() { std::cout << "Hello, World!" << std::endl; }
 
-// Change from void to int because void doesn't return anythinh
-int AddOneRef(int &x) { 
-    return x + 1; 
+// Change from void to int because void doesn't return anything
+void AddOneRef(int &x) { 
+    x = x + 1; 
+    return;
 }
 
-bool isOdd(int x) { return false; }
+bool isOdd(int x){
+    x = abs(x);
+    if (x % 2 == 1)
+        return true;
+    else 
+        return false;
+}
+
 
 int floatToInt(float x) { return 0; }
 
