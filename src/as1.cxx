@@ -4,7 +4,6 @@ namespace homework {
 
 void printHello() { std::cout << "Hello, World!" << std::endl; }
 
-// Change from void to int because void doesn't return anything
 void AddOneRef(int &x) { 
     x = x + 1; 
     return;
@@ -19,8 +18,23 @@ bool isOdd(int x){
 }
 
 
-int floatToInt(float x) { return 0; }
+int floatToInt(float x) { 
+    static_cast<int>(x);
+    return x; 
+}
 
-int factorial(int n) { return 0; }
+int factorial(int n) { 
+    if (n >= 0) { 
+        int f = 1;
+        int i = 1;
+        while(i <= n){
+            f = f*i;
+            i = i+1;
+        }
+        return f;
+    }
+    else 
+        return -1;
+}
 
 }; // namespace homework
