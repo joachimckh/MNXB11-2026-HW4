@@ -4,7 +4,10 @@ namespace homework {
 
 void printHello() { std::cout << "Hello, World!" << std::endl; }
 
-void AddOneRef(int &x) { return; }
+// Change from void to int because void doesn't return anythinh
+int AddOneRef(int &x) { 
+    return x + 1; 
+}
 
 bool isOdd(int x) { return false; }
 
