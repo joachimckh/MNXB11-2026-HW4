@@ -4,6 +4,7 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
 #include <iostream>
 
 int main() {  
@@ -23,7 +24,7 @@ int main() {
   std::cout << homework::isOdd(y) << std::endl;
   std::cout << homework::isOdd(z) << std::endl;
   */
-
+ /*
   //1.3
   float d = 4.2;
   std::cout << homework::floatToInt(d) << std::endl;
@@ -32,5 +33,28 @@ int main() {
   int e = 5;
   std::cout << homework::factorial(e) << std::endl;
 
+  // 2.1
+  homework::Foo FooTest;
+
+
+  std::cout << FooTest.bar() << std::endl;
+  std::cout << FooTest.baz() << std::endl;
+  std::cout << FooTest.x << std::endl;
+  std::vector<double> quux = FooTest.quux();
+  for (double i : quux)
+  {
+    std::cout << i << " ";
+  }
+  */
+  //2.2
+  homework::fVector2D v1(1.5f, 2.5f);
+  homework::fVector2D v2(3.0f, 4.0f);
+  homework::fVector2D v3(4.5f, 6.5f);
+  homework::fVector2D v4(1.5f, 2.5f);
+
+  homework::fVector2D sum = (v1 + v2);
+  
+  std::cout << (sum == v3) << std::endl;
+  std::cout << (sum == v4) << std::endl;
 }
 
