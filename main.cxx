@@ -5,6 +5,7 @@
 
 #include "as1.hpp"
 #include "as2.hpp"
+#include "as3.hpp"
 #include <iostream>
 
 int main() { 
