@@ -27,6 +27,12 @@ public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
+  // Operator overloading the + operator  
+  friend fVector2D operator+(const fVector2D &v, const fVector2D &u);
+
+  // Operator overloading the == operator 
+  friend bool operator==(const fVector2D &v, const fVector2D &u);
+
 private:
   float x_;
   float y_;
