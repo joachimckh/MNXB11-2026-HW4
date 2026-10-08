@@ -1,0 +1,102 @@
+
+
+QUESTIONS FOR HOMEWORK 4 
+
+QUESTION 1: 
+Describe briefly the role of the three different steps in the compilation process
+
+ANSWER TO QUESTION 1: 
+the steps identified in the compilation process mentioned in lecture 4 are first the creation of a scource code.
+This is then compiled using a compiler in four steps, first pre-processing 
+followed by compilation, assembly and linking respectively. 
+- pre processing; improves the readability of the code by removing for example comments and unpacking included files 
+- compiling; compiles - translates to computer language; an assembly language which the assembler is able to understand 
+- assembling; generates a new file containing machine level instructions
+- linking; the linking of function calls with their definitions. this can be either static or dyanmic. static linking puts everything in a single file which is the created executable file 
+dynamic linking uses only the names of the shared libraries and then refers to those during the exceution
+
+The result of this is a binary file which is a library or executable.  
+
+QUESTION 2: 
+In the the following code snippet, give the order that the objects are destroyed. Are there any objects that aren't destroyed?
+
+#include<iostream>
+#include<string> 
+void print_number(int number) { std::cout << number << std::endl; }
+
+int main() {
+
+  int i{0};
+  { int j{1}; }
+
+  print_number(i);
+  auto number_on_heap { new int{3}};
+  auto leaked_string{new std::string{"I'm being leaked!"}};
+  delete number_on_heap;
+}
+
+ANSWER TO QUESTION 2: 
+Keeping in mind that once the scope of the integer is over, the compiler destroys the integer 
+and at the end of the scope, projects going out of the scope are destroyed in reverse order as in they where created 
+
+Thus { int j{1}; } is the inner scope of j. J is destroyed after the scope is ending 
+the delete number_on_heap command causes the deletion of number_on_heap
+when main ends number_on_heap and leaked_string will be destroyed. 
+
+something that is not explicitely destroyed is the string "I'm being leaked"
+this is pointed to by leaked_string. removing the pointer does not remove the thing it is pointing to. 
+the use of auto and recognizes the type automatically along with the use of new and the positioning of { } 
+shows that we are dealing with a pointer. 
+
+
+
+QUESTION 3 PART 1: 
+Given a source file called homework.cxx. What command would you run to
+Compile it into an object file called homework.o, with warnings enabled
+
+ANSWER QUESTION 3 PART 1: 
+
+g++ -Wall -Wextra -c homework.cxx 
+
+g++ specifies the compiler 
+-Wall and -Wextra enables the warnings 
+the source file is homework.cxx 
+the object file is homework.o 
+-c ; creates the object file 
+
+
+QUESTION 3 PART 2 
+Compile it and link it into an executable called homework, with warnings enabled
+
+ANSWER QUESTION 3 PART 2 
+-o ; o for ouput allows you to name the output file but is unessacary in this case since the default name would be homework.o 
+the other parts of the command are fairly simular to the previous one. the name specified for the output file is homework. 
+
+g++ -Wall -Wextra homework.cxx -o homework
+
+or you could do part 1 and 2 it in one go:
+
+g++ -Wall -Wextra homework.cxx -o homework.o
+
+
+QUESTION 4
+What type of function is declared here? When is it invoked?
+class Circle {
+  public:
+    Circle(const Circle& other);
+};
+
+ANSWER TO QUESTION 4:
+The type of function that is declared is a copy constructor which can be recognized by 
+Rectangle(const Rectangle&);
+in this case that is 
+Circle(const Circle& other);
+
+a charackteristic of a copy constructor is that is is ran automatically by the compiler. 
+
+QUESTION 5 
+Explain RAII
+
+ANSWER TO QUESTION 5
+RAII stands for Resource Acuisition Is Initialization. It makes programming easier by letting you focus on the important parts. 
+It removes the need to do manual resource management by cleaning up of recourses and memory and preventing leaks automatically.
