@@ -5,6 +5,7 @@
 
 #include "as1.hpp"
 #include "as2.hpp"
+#include "as3.hpp"
 #include <iostream>
 
 int main() {  
@@ -45,7 +46,7 @@ int main() {
   {
     std::cout << i << " ";
   }
-  */
+  
   //2.2
   homework::fVector2D v1(1.5f, 2.5f);
   homework::fVector2D v2(3.0f, 4.0f);
@@ -56,5 +57,13 @@ int main() {
   
   std::cout << (sum == v3) << std::endl;
   std::cout << (sum == v4) << std::endl;
+*/
+  //3
+  
+  homework::Apple apple1{homework::Color::green};
+  std::cout << apple1.getTaste() << std::endl;
+  std::cout << apple1.getName() << std::endl;
 }
+
+
 
