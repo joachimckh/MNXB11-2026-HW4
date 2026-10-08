@@ -1,5 +1,8 @@
-#pragma once
+#ifndef AS1_HPP
+#define AS1_HPP
+
 #include <iostream>
+
 
 namespace homework {
 // Mainly from the slides of the first week
@@ -7,11 +10,12 @@ namespace homework {
 // As 1.0 (Hello World) function that prints "Hello, World!"
 // This is already done for you in src/as1.cxx
 void printHello();
+void printDone();
 
 // As 1.1 (Reference/indirection) function that takes the address of an int and returns the
 // original value plus one 
 // TO DO: implement the function "AddOneRef"
-void AddOneRef(int &x);
+int AddOneRef(int& x);
 
 // As 1.2 (Function declarators) check if number is odd. Return true if odd, false if even
 // TO DO: implement the function "isOdd" here or in src/as1.cxx
@@ -28,3 +32,5 @@ int floatToInt(float x);
 int factorial(int n);
 
 } // namespace homework
+
+#endif // AS1_HPP
