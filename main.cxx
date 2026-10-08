@@ -4,10 +4,18 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
+#include "as3.hpp"
 #include <iostream>
 
 int main() { 
   // Example for as1.0
   homework::printHello();
+
+homework::Apple apple(homework::Color::red);
+
+std::cout << apple.getName() << std::endl;
+std::cout << apple.getTaste() << std::endl;
+
 }
 
