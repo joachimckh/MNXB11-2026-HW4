@@ -27,6 +27,14 @@ public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
+  fVector2D operator+(const fVector2D &other) const {
+    return fVector2D(x_ + other.x_, y_ + other.y_);
+  }
+
+  bool operator==(const fVector2D &other) const {
+    return x_ == other.x_ && y_ == other.y_;
+  }
+
 private:
   float x_;
   float y_;

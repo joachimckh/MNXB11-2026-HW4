@@ -4,12 +4,24 @@ namespace homework {
 
 void printHello() { std::cout << "Hello, World!" << std::endl; }
 
-void AddOneRef(int &x) { return; }
+int AddOneRef(int &x) { return ++x; }
 
-bool isOdd(int x) { return false; }
+bool isOdd(int x) { 
+    return x % 2 != 0;
+ }
 
-int floatToInt(float x) { return 0; }
+int floatToInt(float x) { 
+    return (int)x; 
+}
 
-int factorial(int n) { return 0; }
+int factorial(int n) { 
+    if (n < 0) {
+        return -1;
+    } else if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
 
 }; // namespace homework
