@@ -9,5 +9,8 @@
 int main() { 
   // Example for as1.0
   homework::printHello();
+  homework::fVector2D(5,5);
 }
 
+//int number = homework::factorial(3);
+//std::cout << number << std::endl;
