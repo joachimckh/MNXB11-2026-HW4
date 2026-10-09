@@ -2,8 +2,5 @@
 
 namespace homework {
 
-
-
-
 } // namespace homework
 
