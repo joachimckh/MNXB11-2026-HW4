@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include <cmath>
+#include <limits>
 
 namespace homework {
 // Mainly from the slides of the first week
