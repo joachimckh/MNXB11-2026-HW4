@@ -27,9 +27,13 @@ public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
+  friend fVector2D operator+(const fVector2D& lhs, const fVector2D& rhs);
+  bool operator==(const fVector2D& rhs);
+
 private:
   float x_;
   float y_;
 };
+
 
 } // namespace homework
