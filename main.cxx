@@ -3,11 +3,13 @@
  *  Don't forget to add includes properly.
  * */
 
-#include "as1.hpp"
+#include "as3.hpp"
 #include <iostream>
 
 int main() { 
   // Example for as1.0
-  homework::printHello();
+  //homework::printHello();
 }
 
+//int number = homework::factorial(3);
+//std::cout << number << std::endl;
