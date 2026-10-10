@@ -26,6 +26,12 @@ class fVector2D {
 public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
+//friend allows acess to x_ and y_
+//fVector2d function returns 2d vector
+//operator+ adds 2 vals
+//after operator+ we have the vectors that we add together
+  friend fVector2D operator+(const fVector2D& a, const fVector2D& b);
+  bool operator ==(const fVector2D& other) const;
 
 private:
   float x_;
