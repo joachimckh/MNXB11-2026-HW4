@@ -2,14 +2,40 @@
 
 namespace homework {
 
-void printHello() { std::cout << "Hello, World!" << std::endl; }
+void printHello() { 
+    std::cout << "Hello, World!" << std::endl; 
+}
 
-void AddOneRef(int &x) { return; }
+void AddOneRef(int &x) { 
+    x = x + 1; 
+    return; 
+}
 
-bool isOdd(int x) { return false; }
+bool isOdd(int x) { 
+    if (x % 2 != 0)  
+    {
+        return true; 
+    }
+    else
+    {
+        return false; 
+    }
+}
 
-int floatToInt(float x) { return 0; }
+int floatToInt(float f) { 
+    return static_cast<int>(f); 
+}
 
-int factorial(int n) { return 0; }
+int factorial(int n) { 
+    if (n < 0)
+    {
+        return -1; 
+    }
+    if (n == 0)
+    {
+        return 1;
+    }
+    return n * factorial(n-1); 
+}
 
-}; // namespace homework
+}; // evve2655 homework
