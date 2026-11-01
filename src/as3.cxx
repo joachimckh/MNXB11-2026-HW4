@@ -16,4 +16,3 @@ namespace homework {
         return "sweet";
     }
 } // namespace homework
-
